@@ -1,0 +1,27 @@
+.mg-l {
+  margin-left: 5rem;
+  font-size: 2rem !important;
+  color: #ffc004 !important;
+}
+input {
+  width: 70% !important;
+  border-radius: 0.5rem !important;
+  margin: 0 auto !important;
+}
+
+.container {
+  max-width: 90% !important;
+}
+img {
+  max-width: 100%;
+}
+
+@media (min-width: 960px) {
+  #movies .col-md-3 .well {
+    height: 390px;
+  }
+
+  #movies .col-md-3 img {
+    height: 240px;
+  }
+}
