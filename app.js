@@ -8,7 +8,7 @@ const api_key = "60107917";
 let movies;
 
 const fetchMovies = async () => {
-  await fetch(`http://www.omdbapi.com/?s=${searchText}&apikey=${api_key}`)
+  await fetch(`https://www.omdbapi.com/?s=${searchText}&apikey=${api_key}`)
     .then((res) => res.json())
     .then((data) => {
       movies = data.Search;
@@ -39,7 +39,7 @@ function movieSelected(id) {
 const getMovie = async () => {
   let movieId = sessionStorage.getItem("movieId");
   console.log(movieId);
-  await fetch(`http://www.omdbapi.com/?i=${movieId}&apikey=${api_key}`)
+  await fetch(`https://www.omdbapi.com/?i=${movieId}&apikey=${api_key}`)
     .then((res) => res.json())
     .then((movie) => {
       let output = `
@@ -65,7 +65,7 @@ const getMovie = async () => {
         <h3>Plot</h3>
         ${movie.Plot}
         <hr/>
-        <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class="btn btn-warning">View IMDB</a>
+        <a href="https://imdb.com/title/${movie.imdbID}" target="_blank" class="btn btn-warning">View IMDB</a>
         <a href="index.html" class="btn btn-primary">Go Back To Search</a>
         </div>
         </div>
