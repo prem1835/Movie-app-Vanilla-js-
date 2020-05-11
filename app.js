@@ -78,6 +78,7 @@ const getMovie = async () => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  searchTerm.blur();
   searchText = searchTerm.value;
   fetchMovies();
 });
